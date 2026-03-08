@@ -8,12 +8,12 @@ Clustering: Used K-Means and  Gaussian Mixture Modeling (GMM) to identify high-p
 Monte Carlo Simulation: 10,000 iterations comparing randomized lineups against data-optimized rosters, yielding a 73.4% win probability.
 Financial Impact: Quantified the ROI of shootout optimization, identifying potential revenue gains from $4M to $26M per team through the playoffs. 
 ## Technologies and Librairies Used:
-Google Colab
-Python (Pandas, NumPy, Scikit-Learn, XGBoost)
-Matplotlib/Seaborn (Data Visualization)
-NHL Web API
+- Google Colab
+- Python (Pandas, NumPy, Scikit-Learn, XGBoost)
+- Matplotlib/Seaborn (Data Visualization)
+- NHL Web API
 ## Special thanks to:
-Jeremy Sylvain (NHL)
-Northwood University and the MSBA faculty 
-Dr. Scott Morrissette (advisor) 
+- Jeremy Sylvain (NHL)
+- Northwood University and the MSBA faculty 
+- Dr. Scott Morrissette (advisor) 
 
