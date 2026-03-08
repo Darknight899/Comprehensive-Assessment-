@@ -1,4 +1,4 @@
-# Utilizing Machine Learning for Shootout Success in the NHL 
+## Utilizing Machine Learning for Shootout Success in the NHL 
 Project goal: To gain insights into the player tactics used in shootouts in order fo teams to find success and make the playoffs.  
 The data set used and explored was retrieved from the NHL Web API, n=3,115. In the data cleaning and wrangling phase, I normalized the player shot coordinate 'x' to simplify analysis. I added a "deke" category under shot_type feature.
 
