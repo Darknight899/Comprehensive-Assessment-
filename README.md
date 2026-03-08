@@ -1,5 +1,19 @@
-## Utilizing Machine Learning for Shootout Success in the NHL 
-Project goal: To gain insights into the player tactics used in shootouts in order fo teams to find success and make the playoffs.  
-The data set used and explored was retrieved from the NHL Web API, n=3,115. In the data cleaning and wrangling phase, I normalized the player shot coordinate 'x' to simplify analysis. I added a "deke" category under shot_type feature.
+## NHL Shootout Optimization & Financial Impact Analysis
+This repository contains the machine learning models developed in Google Colab for my Master of Business Analytics (MSBA) Capstone Project. The project investigates how data-driven tactical optimization in NHL shootouts can mitigate secure critical standing points for "bubble" teams (+-5 pts within the playoff threshold) and generate millions in post-season revenue.
+# Project Overview
+NHL shootouts are entertaining for fans yet often viewed as a "coin flip" to determine the winner. However, for teams on the playoff bubble, a single shootout point can be the difference between a $26M deep playoff run and a premature off-season. Data from 5 NHL regular seasons (2020-21 to 2024-25) was pulled from the NHL Web API: [gamecenter play-by-play], [playerlanding], [club-schedule-season], and [standings[date]]. This project analyzed 440 shootout games and n=3,115 attempts.  
+# Models
+sxG Model: sxG = P(Y = 1 | X_1, X_2, …, Xn), where Y is the goal predicitor, 1 = goal, 0 = no goal. The X’s represent the independent features. In this study, the independent features consist of: “distance_from_net”, “angle_from_net”, “shooter_handedness”, “goalie_handedness”, “shot_type”, and “is_off_wing”, while the target feature is “is_goal”. 
+Clustering: Used K-Means and  Gaussian Mixture Modeling (GMM) to identify high-probability "Sweet Spots" on the ice. utilized the Elbow and Silhouette Methods for optimal k value. 
+Monte Carlo Simulation: 10,000 iterations comparing randomized lineups against data-optimized rosters, yielding a 73.4% win probability.
+Financial Impact: Quantified the ROI of shootout optimization, identifying potential revenue gains from $4M to $26M per team through the playoffs. 
+# Technologies Used:
+Google Colab
+Python (Pandas, NumPy, Scikit-Learn, XGBoost)
+Matplotlib/Seaborn (Data Visualization)
+NHL Web API
+# Special thanks to:
+Jeremy Sylvain (NHL)
+Northwood University and the MSBA faculty 
+Dr. Scott Morrissette (advisor) 
 
-. Using Linear regression is a simple model yet simple models can be extremly useful and telling. For example, in this model, the mean squared error (MSE) return a value of 0.32, which is fairly weak, but if we look at the coefficients we understand why. Weight's coefficient (1.09) is twice as strong and impactful as height (-0.57) meaning an increase in 1 standard deviation in weight increases BMI (index) 1.09 units. This makes logical sense, heavier people have a higher BMI. However, contrary to some beliefs, gender coefficient (0.01), as no impact on the model. I assumed a linear relationship between index (y) and the independent features height (x), weight (x), and gender (x). Thus, we can predict that those who are heavier is consistent with a higher BMI. Moving forward, it would interesting to train a polynomial regression to investigate non-linear relationships and compare results with the linear regression model. 
